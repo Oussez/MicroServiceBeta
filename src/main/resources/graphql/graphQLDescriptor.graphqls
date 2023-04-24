@@ -1,0 +1,27 @@
+type Query {
+		getAllAccounts: [Compte],
+		getAccountById(id : Int): Compte
+		}
+
+type Mutation {
+	saveAccount(compte : CompteType):Compte
+	updateAccount(compte : CompteType, id : Int):Compte
+	deleteAccount(id : Int):String
+}
+
+type Compte {
+		Id : Int,
+		firstName : String,
+		lastName : String,
+		email: String
+		}
+
+input CompteType {
+	Id : Int,
+	firstName : String,
+	lastName : String,
+	email: String
+}
+
+#input TypeX --> pour definir un type ( classe ) d'un attribut
+#type TypeY --> pour définir un type ( classe ) de return
